@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="/assets/favicon.png"
-        type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -26,80 +25,89 @@
     <main>
         <section>
             <h1>Primeiro, seu prato</h1>
-            <div class="container-options">
-                <article>
+            <div class="container-options dishs">
+                <article onclick="selectDish(this)">
                     <img src="/assets/sanduíche de presunto.jpg">
                     <h2>Sanduíche de Presunto</h1>
                         <p>É a comida preferida do Chaves</p>
                         <span>R$4,00</span>
+                        <ion-icon name="checkmark-circle"></ion-icon>
                 </article>
 
-                <article>
-                    <img src="/assets/sanduíche de presunto.jpg">
-                    <h2>Sanduíche de Presunto</h1>
-                        <p>É a comida preferida do Chaves</p>
-                        <span>R$4,00</span>
+                <article onclick="selectDish(this)">
+                    <img src="/assets/frango assado.jpg">
+                    <h2>Frango Assado</h1>
+                        <p>Foi assim que Dona Clotilde conquistou Seu Madruga</p>
+                        <span>R$20,00</span>
+                        <ion-icon name="checkmark-circle"></ion-icon>
                 </article>
 
-                <article>
+                <article onclick="selectDish(this)">
                     <img src="/assets/sanduíche de presunto.jpg">
-                    <h2>Sanduíche de Presunto</h1>
-                        <p>É a comida preferida do Chaves</p>
-                        <span>R$4,00</span>
-                </article>
-            </div>
-
-        </section>
-
-        <section>
-            <h1>Primeiro, seu prato</h1>
-            <div class="container-options">
-                <article>
-                    <img src="/assets/sanduíche de presunto.jpg">
-                    <h2>Sanduíche de Presunto</h1>
-                        <p>É a comida preferida do Chaves</p>
-                        <span>R$4,00</span>
-                </article>
-
-                <article>
-                    <img src="/assets/sanduíche de presunto.jpg">
-                    <h2>Sanduíche de Presunto</h1>
-                        <p>É a comida preferida do Chaves</p>
-                        <span>R$4,00</span>
-                </article>
-
-                <article>
-                    <img src="/assets/sanduíche de presunto.jpg">
-                    <h2>Sanduíche de Presunto</h1>
-                        <p>É a comida preferida do Chaves</p>
-                        <span>R$4,00</span>
+                    <h2>Panqueca de Carne</h1>
+                        <p>"Devolva a bandeja, Chiquinha!"</p>
+                        <span>R$10,00</span>
+                        <ion-icon name="checkmark-circle"></ion-icon>
                 </article>
             </div>
 
         </section>
 
         <section>
-            <h1>Primeiro, seu prato</h1>
-            <div class="container-options">
-                <article>
-                    <img src="/assets/sanduíche de presunto.jpg">
-                    <h2>Sanduíche de Presunto</h1>
-                        <p>É a comida preferida do Chaves</p>
-                        <span>R$4,00</span>
+            <h1>Agora, sua bebida</h1>
+            <div class="container-options drinks">
+                <article onclick="selectDrink(this)">
+                    <img src="/assets/refresco de limao.jpg">
+                    <h2>Refresco de Limão</h1>
+                        <p>Parece de tamarindo, mas tem gosto de groselha</p>
+                        <span>R$4,99</span>
+                        <ion-icon name="checkmark-circle"></ion-icon>
                 </article>
 
-                <article>
-                    <img src="/assets/sanduíche de presunto.jpg">
-                    <h2>Sanduíche de Presunto</h1>
-                        <p>É a comida preferida do Chaves</p>
-                        <span>R$4,00</span>
+                <article onclick="selectDrink(this)">
+                    <img src="/assets/refresco de limao.jpg">
+                    <h2>Refresco de Tamarindo</h1>
+                        <p>Parece de groselha, mas tem gosto de limão</p>
+                        <span>R$5,00</span>
+                        <ion-icon name="checkmark-circle"></ion-icon>
                 </article>
 
-                <article>
-                    <img src="/assets/sanduíche de presunto.jpg">
-                    <h2>Sanduíche de Presunto</h1>
-                        <p>É a comida preferida do Chaves</p>
-                        <span>R$4,00</span>
+                <article onclick="selectDrink(this)">
+                    <img src="/assets/refresco de limao.jpg">
+                    <h2>Refresco de groselha</h1>
+                        <p>Parece de limão, mas tem gosto de tamarindo</p>
+                        <span>R$5,01</span>
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                </article>
+            </div>
+
+        </section>
+
+        <section>
+            <h1>Por fim, sua sobremesa</h1>
+            <div class="container-options desserts">
+                <article onclick="selectDessert(this)">
+                    <img src="/assets/churros.jpg">
+                    <h2>Churros</h1>
+                        <p>A especialidade de Dona Florinda!</p>
+                        <span>R$2,00</span>
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                </article>
+
+                <article onclick="selectDessert(this)">
+                    <img src="/assets/melancia.jpg">
+                    <h2>Melancia</h1>
+                        <p>Para um professor realmente querido!</p>
+                        <span>R$15,00</span>
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                </article>
+
+                <article onclick="selectDessert(this)">
+                    <img src="/assets/pirulito.jpg">
+                    <h2>Pirulito de Caramelo</h1>
+                        <p>"Primeiro me diz se você gosta..."</p>
+                        <span>R$1,00</span>
+                        <ion-icon name="checkmark-circle"></ion-icon>
                 </article>
             </div>
 
@@ -113,6 +121,8 @@
         </button>
     </footer>
 
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="script.js"></script>
 </body>
 
