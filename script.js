@@ -1,20 +1,46 @@
-function selectDish(dish) {
-    const dishs = document.querySelectorAll('.dishs article')
-    dishs.forEach((dish) => dish.classList.remove('selected'))
+let dishIsSelected = false;
+let drinkIsSelected = false;
+let dessertIsSelected = false;
 
-    dish.classList.add('selected')
+function selectDish(dish) {
+    dishIsSelected = true;
+
+    const dishs = document.querySelectorAll('.dishs article');
+    dishs.forEach((dish) => dish.classList.remove('selected'));
+
+    dish.classList.add('selected');
+
+    unlockSendButton();
 }
 
 function selectDrink(drink) {
-    const drinks = document.querySelectorAll('.drinks article')
-    drinks.forEach((drink) => drink.classList.remove('selected'))
+    drinkIsSelected = true;
 
-    drink.classList.add('selected')
+    const drinks = document.querySelectorAll('.drinks article');
+    drinks.forEach((drink) => drink.classList.remove('selected'));
+
+    drink.classList.add('selected');
+
+    unlockSendButton();
 }
 
 function selectDessert(dessert) {
-    const desserts = document.querySelectorAll('.desserts article')
-    desserts.forEach((dessert) => dessert.classList.remove('selected'))
+    dessertIsSelected = true;
 
-    dessert.classList.add('selected')
+    const desserts = document.querySelectorAll('.desserts article');
+    desserts.forEach((dessert) => dessert.classList.remove('selected'));
+
+    dessert.classList.add('selected');
+
+    unlockSendButton();
+}
+
+function unlockSendButton() {
+    if (dishIsSelected && drinkIsSelected && dessertIsSelected) {
+        const unlockedSendButton = document.querySelector('.unlocked-send-button');
+        const lockedSendButton = document.querySelector('.locked-send-button');
+
+        lockedSendButton.classList.add('display-none');
+        unlockedSendButton.classList.remove('display-none');
+    }
 }

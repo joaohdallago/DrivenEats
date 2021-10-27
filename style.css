@@ -155,3 +155,14 @@ footer button {
     color: #fff;
     background-color: #CBCBCB;
 }
+
+footer .unlocked-send-button {
+    background-color: #32B72F;
+}
+
+/*::::::::::::SUPPORT::::::::::::*/
+
+.display-none {
+    display: none;
+}
+
