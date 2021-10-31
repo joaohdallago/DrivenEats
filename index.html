@@ -119,10 +119,40 @@
             Selecione os 3 itens <br>
             para fechar o pedido
         </button>
-        <button class="unlocked-send-button display-none">
+        <button class="unlocked-send-button display-none" onclick="toggleConfirmOrder()">
             Fechar o pedido
         </button>
     </footer>
+
+    <div class="container-confirm-order display-none">
+        <div class="confirm-order">
+            <h1>Confirme seu pedido</h1>
+            <ul>
+                <li>
+                    <h2>blablabla</h2>
+                    <span>R$20,00</span>
+                </li>
+                <li>
+                    <h2>blablabla</h2>
+                    <span>R$20,00</span>
+                </li>
+                <li>
+                    <h2>blablabla</h2>
+                    <span>R$20,00</span>
+                </li>
+                <li>
+                    <h2>TOTAL</h2>
+                    <span>R$20,00</span>
+                </li>
+            </ul>
+
+            <div class="buttons">
+                <button>Tudo certo, pode pedir!</button>
+                <button onclick="toggleConfirmOrder()">Cancelar</button>
+            </div>
+        </div>
+
+    </div>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
