@@ -2,10 +2,15 @@ let selectedDish;
 let selectedDrink;
 let selectedDessert;
 
-function selectDish(dish) {
-    selectedDish = {};
 
-    console.log(dish.querySelector('h2').innerHTML)
+
+function selectDish(dish) {
+    selectedDish = {
+        name: dish.querySelector('h2').innerHTML,
+        price: dish.querySelector('span').innerHTML.replace("R$", '')
+    };
+
+    console.log(selectedDish)
 
     const dishs = document.querySelectorAll('.dishs article');
     dishs.forEach((dish) => dish.classList.remove('selected'));
@@ -16,8 +21,10 @@ function selectDish(dish) {
 }
 
 function selectDrink(drink) {
-    selectedDrink = {};
-
+    selectedDrink = {
+        name: drink.querySelector('h2').innerHTML,
+        price: drink.querySelector('span').innerHTML.replace("R$", '')
+    };
     const drinks = document.querySelectorAll('.drinks article');
     drinks.forEach((drink) => drink.classList.remove('selected'));
 
@@ -27,7 +34,10 @@ function selectDrink(drink) {
 }
 
 function selectDessert(dessert) {
-    selectedDessert = {};
+    selectedDessert = {
+        name: dessert.querySelector('h2').innerHTML,
+        price: dessert.querySelector('span').innerHTML.replace("R$", '')
+    };
 
     const desserts = document.querySelectorAll('.desserts article');
     desserts.forEach((dessert) => dessert.classList.remove('selected'));
