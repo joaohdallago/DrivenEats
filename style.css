@@ -164,6 +164,8 @@ footer .unlocked-send-button {
     background-color: #32B72F;
 }
 
+/*::::::::::::CONFIRM ORDER::::::::::::*/
+
 .container-confirm-order {
     position: fixed;
     z-index: 2;
