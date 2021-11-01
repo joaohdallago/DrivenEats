@@ -2,15 +2,11 @@ let selectedDish;
 let selectedDrink;
 let selectedDessert;
 
-
-
 function selectDish(dish) {
     selectedDish = {
         name: dish.querySelector('h2').innerHTML,
         price: dish.querySelector('span').innerHTML.replace("R$", '')
     };
-
-    console.log(selectedDish)
 
     const dishs = document.querySelectorAll('.dishs article');
     dishs.forEach((dish) => dish.classList.remove('selected'));
@@ -58,6 +54,61 @@ function unlockSendButton() {
 }
 
 function toggleConfirmOrder() {
+    renderConfirmOrder();
+
     const containerConfirmOrder = document.querySelector('.container-confirm-order');
     containerConfirmOrder.classList.toggle('display-none');
+}
+
+function totalPrice() {
+    let finalPrice = 0;
+    const priceList = [selectedDish.price, selectedDrink.price, selectedDessert.price];
+
+    priceList.forEach(price => finalPrice += Number(price.replace(',', '.')));
+
+    return finalPrice.toFixed(2)
+}
+
+function renderConfirmOrder() {
+    const confirmOrderString = `<li>
+    <h2>${selectedDish.name}</h2>
+    <span>R$${selectedDish.price}</span>
+</li>
+<li>
+    <h2>${selectedDrink.name}</h2>
+    <span>R$${selectedDrink.price}</span>
+</li>
+<li>
+    <h2>${selectedDessert.name}</h2>
+    <span>R$${selectedDessert.price}</span>
+</li>
+<li>
+    <h2>TOTAL</h2>
+    <span>R$${totalPrice().replace('.', ',')}</span>
+</li>`
+
+    const confirmOrderUl = document.querySelector('.confirm-order ul');
+    confirmOrderUl.innerHTML = confirmOrderString;
+}
+
+function whatsappOrder() {
+    const customerName = prompt('Insira seu nome');
+    const customerAddress = prompt('Insira seu endereço');
+
+    const whatsappOrderString = `
+    Olá, gostaria de fazer o pedido:
+    - Prato: ${selectedDish.name}
+    - Bebida: ${selectedDrink.name}
+    - Sobremesa: ${selectedDessert.name}
+    Total: R$ ${totalPrice()}
+    
+    Nome: ${customerName}
+    Endereço: ${customerAddress}
+    `;
+
+    console.log(whatsappOrderString);
+
+    const whatappLink = `https://wa.me/5548998399037?text=${encodeURIComponent(whatsappOrderString)}`
+
+    window.open(whatappLink)
 }
