@@ -106,8 +106,6 @@ function whatsappOrder() {
     Endereço: ${customerAddress}
     `;
 
-    console.log(whatsappOrderString);
-
     const whatappLink = `https://wa.me/5548998399037?text=${encodeURIComponent(whatsappOrderString)}`
 
     window.open(whatappLink)
